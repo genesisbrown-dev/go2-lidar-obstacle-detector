@@ -1,0 +1,20 @@
+# config/detector_params.yaml
+# ─────────────────────────────────────────────────────────────
+# Runtime parameters for the LidarDetectorNode.
+# Load these via the launch file or with:
+#   ros2 param load /lidar_detector_node config/detector_params.yaml
+# ─────────────────────────────────────────────────────────────
+
+lidar_detector_node:
+  ros__parameters:
+
+    # LiDAR topic to subscribe to.
+    # Same value works in Isaac Sim and on the physical Go2.
+    lidar_topic: "/unitree_go2_0/lidar/point_cloud"
+
+    # Distance thresholds (metres)
+    # Nearest obstacle above safe_distance   → SAFE
+    # Nearest obstacle above caution_distance → CAUTION
+    # Nearest obstacle below caution_distance → STOP
+    safe_distance:    2.0
+    caution_distance: 1.0

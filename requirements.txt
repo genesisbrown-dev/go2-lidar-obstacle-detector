@@ -1,0 +1,28 @@
+# requirements.txt
+# ─────────────────────────────────────────────────────────────
+# Python dependencies for go2-lidar-obstacle-detector
+#
+# ROS2 Humble packages (rclpy, sensor_msgs) are installed via
+# the ROS2 toolchain (apt / rosdep) and are NOT listed here.
+# This file covers pure-Python extras useful during development,
+# testing, and optional extensions.
+#
+# Install:  pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────
+
+# ── Testing ───────────────────────────────────────────────────
+pytest>=7.4.0           # Test runner used by `colcon test` and standalone
+pytest-cov>=4.1.0       # Coverage reports during CI
+
+# ── Code quality ──────────────────────────────────────────────
+flake8>=6.1.0           # PEP-8 style linter (also run by ament_flake8)
+mypy>=1.5.0             # Optional: static type checking
+
+# ── Point-cloud utilities (optional, for offline analysis) ────
+numpy>=1.24.0           # Fast array math; useful if you extend the node
+                        # with NumPy-based filtering or voxelisation
+
+# ── Visualisation (optional, desktop development only) ────────
+# Uncomment if you want to plot point clouds locally:
+# open3d>=0.18.0        # 3-D point cloud viewer
+# matplotlib>=3.7.0     # 2-D distance plots

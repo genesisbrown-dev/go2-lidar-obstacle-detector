@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<!--
+  package.xml
+  -----------
+  ROS2 package manifest. Declares the package name, version,
+  dependencies, and build type so colcon can resolve everything
+  automatically.
+-->
+<package format="3">
+  <name>go2_lidar_detector</name>
+  <version>0.1.0</version>
+  <description>
+    LiDAR obstacle detector for the Unitree Go2 robot.
+    Subscribes to PointCloud2 and classifies nearest obstacle as
+    SAFE / CAUTION / STOP. Works in NVIDIA Isaac Sim and on hardware.
+  </description>
+
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>MIT</license>
+
+  <!-- Build system -->
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- Runtime ROS2 dependencies -->
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>sensor_msgs_py</depend>
+
+  <!-- Test dependencies -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
